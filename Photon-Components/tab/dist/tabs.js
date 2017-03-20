@@ -377,7 +377,8 @@
         tabItem.classList.add("adding");
         tabItem.style.width = orgWidth + "px";
         if (tabItem.classList.contains("active")) {
-          if (this.children[tabItem.nodePos + 1].classList.contains("btn") == false &&
+          if (this.children[tabItem.nodePos + 1] &&
+              this.children[tabItem.nodePos + 1].classList.contains("btn") == false &&
               this.children[tabItem.nodePos + 1].classList.contains("tab-item-fixed") == false) {
               this.activateItem(this.children[tabItem.nodePos + 1]);
           }
